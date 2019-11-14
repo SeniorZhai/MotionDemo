@@ -1,5 +1,5 @@
-# [MotionLayout](https://developer.android.com/reference/android/support/constraint/motion/MotionLayout
-) 
+# [MotionLayout](https://developer.android.com/reference/android/support/constraint/motion/MotionLayout)
+ 
 可以通过`LayoutDescription`链接`MotionScene`和`ConstraintLayout`，使得`MotionLayout`在几个`MotionScene`状态间切换
 
 |Tags|Description|
