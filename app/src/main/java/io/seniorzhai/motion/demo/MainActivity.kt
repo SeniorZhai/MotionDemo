@@ -15,7 +15,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        list.adapter = ItemAdapter(listOf("aaa")) { position ->
+        list.adapter = ItemAdapter(listOf("Basic")) { position ->
             if (position == 0) {
                 startActivity(Intent(this, BasicActivity::class.java))
             }
