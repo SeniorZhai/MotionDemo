@@ -15,11 +15,17 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        list.adapter = ItemAdapter(listOf("Basic", "Basic2")) { position ->
-            if (position == 0) {
-                startActivity(Intent(this, BasicActivity::class.java))
-            } else if (position == 1) {
-                startActivity(Intent(this, Basic2Activity::class.java))
+        list.adapter = ItemAdapter(listOf("Basic", "Basic2", "Toggle")) { position ->
+            when (position) {
+                0 -> {
+                    startActivity(Intent(this, BasicActivity::class.java))
+                }
+                1 -> {
+                    startActivity(Intent(this, Basic2Activity::class.java))
+                }
+                2 -> {
+                    startActivity(Intent(this, ToggleActivity::class.java))
+                }
             }
         }
     }

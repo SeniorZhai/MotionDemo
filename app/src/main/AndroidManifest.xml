@@ -19,6 +19,7 @@
         </activity>
         <activity android:name=".BasicActivity" />
         <activity android:name=".Basic2Activity" />
+        <activity android:name=".ToggleActivity" />
     </application>
 
 </manifest>
