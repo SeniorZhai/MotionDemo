@@ -4,69 +4,69 @@
 
 |Tags|Description|
 |:--|:--|
-|`<StateSet>`||
-|`<ConstraintSet>`||
-|`<Transition>`||
+|`<StateSet>`|状态|
+|`<ConstraintSet>`|约束集合|
+|`<Transition>`|描述两个状态间约束关系|
 
 ## Transition
 |Attributes|Description|
 |:--|:--|
-|android:id||
-|constraintSetStart||
-|constraintSetEnd||
-|motionInterpolator||
-|duration||
-|staggered||
-|autoTransition||
-|`<OnSwipe>`||
-|`<OnClick>`||
-|`<KeyFrameSet>`||
+|android:id|ID标识|
+|constraintSetStart|起始约束|
+|constraintSetEnd|终结约束|
+|motionInterpolator|插值器|
+|duration|装换时间|
+|staggered|交错 让不同约束产生交错|
+|autoTransition|自动转场到某种状态 {none, jumpToStart, jumpToEnd, animateToStart, animateToEnd}|
+|`<OnSwipe>`|Touch处理|
+|`<OnClick>`|点击处理|
+|`<KeyFrameSet>`|关键帧|
 
 ### OnSwipe(可选)
 |Attributes|Description|
 |:--|:--|
-|touchAnchorId||
-|touchRegionId||
-|touchAnchorSide||
-|maxVelocity||
-|dragDirection||
-|maxAcceleration||
-|dragScale||
-|moveWhenScrollAtTop||
-|autoComplete||
+|touchAnchorId|touch的锚点|
+|touchRegionId|限制touch范围 即使它不可见|
+|touchAnchorSide|锚点的一侧 {top|left|right|bottom}|
+|maxVelocity|最大速率 默认为4|
+|dragDirection|拖拽方向 {dragUp|dragDown|dragLeft|dragRight}|
+|maxAcceleration|最大加速度 默认 1.2|
+|dragScale|滑动比例因子|
+|moveWhenScrollAtTop|如果滑动伴随着滚动(RecyclerView或NestedScrollView)是否滚动或过度|
+|autoComplete|是否自动完成过渡|
 
 ### OnClick(可选)
 |Attributes|Description|
 |:--|:--|
-|motionTarget||
-|clickAction||
+|motionTarget|触发Click的视图|
+|clickAction|触发后的动作{transitionToEnd，transitionToStart，jumpToEnd，jumpToStart}|
 
 ## StateSet
 |Attributes|Description|
 |:--|:--|
-|`<State>`||
+|`<State>`|状态|
 
 ### State
 |Attributes|Description|
 |:--|:--|
-|android:id||
-|constraints||
-|Variant||
+|id|ID标识|
+|constraints|状态对应的ConstraintSet或Layout|
+|Variant|匹配不同的约束|
 
 #### Variant
 |Attributes|Description|
 |:--|:--|
-|region_widthLessThan||
-|region_widthMoreThan||
-|region_heightLessThan||
-|region_heightMoreThan||
-|constraints||
+|region_widthLessThan|宽度小于匹配|
+|region_widthMoreThan|宽度大于匹配|
+|region_heightLessThan|高度小于匹配|
+|region_heightMoreThan|高度大于匹配|
+|constraints|ConstraintSet或Layout Id|
 
 ## ConstraintSet
 |Attributes|Description|
 |:--|:--|
-|android:id||
-|`<Constraint>`||
+|android:id|ID 标识|
+|`<Constraint>`|ConstraintSet|
 
 ### Constraint
 |Attributes|Description|

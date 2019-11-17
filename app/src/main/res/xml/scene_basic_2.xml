@@ -6,6 +6,7 @@
         motion:constraintSetStart="@layout/activity_basic_2"
         motion:duration="1000">
         <OnSwipe
+            motion:dragScale="2"
             motion:dragDirection="dragRight"
             motion:touchAnchorId="@+id/button"
             motion:touchAnchorSide="right" />

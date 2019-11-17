@@ -4,26 +4,28 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    app:layoutDescription="@xml/scene_toggle">
+    app:layoutDescription="@xml/scene_keyframe"
+    tools:context=".KeyFrameActivity">
 
-    <View
-        android:id="@+id/widget"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:background="#00B8FB"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/button"
+    <TextView
+        android:id="@+id/boom"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="100dp"
-        android:text="toggle"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="20dp"
+        android:text="Boom"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/shack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Shack-A-Lak"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/boom"
         tools:ignore="HardcodedText" />
 
 </androidx.constraintlayout.motion.widget.MotionLayout>

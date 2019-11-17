@@ -15,7 +15,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        list.adapter = ItemAdapter(listOf("Basic", "Basic2", "Toggle")) { position ->
+        list.adapter = ItemAdapter(listOf("Basic", "Basic2", "Toggle", "KeyFrame")) { position ->
             when (position) {
                 0 -> {
                     startActivity(Intent(this, BasicActivity::class.java))
@@ -25,6 +25,9 @@ class MainActivity : AppCompatActivity() {
                 }
                 2 -> {
                     startActivity(Intent(this, ToggleActivity::class.java))
+                }
+                3 -> {
+                    startActivity(Intent(this, KeyFrameActivity::class.java))
                 }
             }
         }
